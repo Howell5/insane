@@ -180,3 +180,13 @@ test('doesn\'t care about quotes', function (t) {
   t.equal(insane('"bar?"'), '"bar?"');
   t.end();
 });
+
+test("HTML Parser should handle multiple attributes without spaces", function (t) {
+  t.equal(
+    insane(
+      '<a target="_blank" rel="noopener noreferrernofollow"target="_blank"href="https://tusi.cn/u/639278639053211787"><strong>→→→→→→more←←←←←←</strong></a>'
+    ),
+    '<a target="_blank" href="https://tusi.cn/u/639278639053211787"><strong>→→→→→→more←←←←←←</strong></a>'
+  );
+  t.end();
+});

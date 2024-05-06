@@ -4,7 +4,7 @@ var he = require('he');
 var lowercase = require('./lowercase');
 var attributes = require('./attributes');
 var elements = require('./elements');
-var rstart = /^<\s*([\w:-]+)((?:\s+[\w:-]+(?:\s*=\s*(?:(?:"[^"]*")|(?:'[^']*')|[^>\s]+))?)*)\s*(\/?)\s*>/;
+var rstart = /^<\s*([\w:-]+)((?:\s*[\w:-]+(?:\s*=\s*(?:(?:"[^"]*")|(?:'[^']*')|[^>\s]+))?)*)\s*(\/?)\s*>/;
 var rend = /^<\s*\/\s*([\w:-]+)[^>]*>/;
 var rattrs = /([\w:-]+)(?:\s*=\s*(?:(?:"((?:[^"])*)")|(?:'((?:[^'])*)')|([^>\s]+)))?/g;
 var rtag = /^</;
